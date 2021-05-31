@@ -1,0 +1,88 @@
+#1 Знайти максимальне число в списку але не більше 100
+lst = [1, 3, 56, 78, 90, 134]
+max_el = lst[0]
+for i in lst:
+    if i < 100:
+        max_el = i
+        break
+for i in lst:
+    if i > max_el and i < 100:
+        max_el = i
+    print('max = ', max_el)
+#2 Знайти суму всіх чисел в списку що діляться на 3
+lst = [7, 3, 56, 78, 90, 134]
+f = 0
+for i in lst:
+    if i % 3 == 0:
+        f = f + i
+print(f)
+#3 Вивести квадрати чисел від 10 до 30
+for i in range(10, 31):
+    print(i**2)
+#4 Знайти середнє значення в списку
+lst = [7, 3, 56, 78, 90, 134]
+s = 0
+d = 0
+for i in lst:
+    s = s + i
+    d = d + 1
+    avg = s / d
+print(avg)
+#5 Порахувати і вивести на екран окремо суму парних і непарних чисел списку
+lst = [7, 3, 56, 78, 90, 134]
+n = 0
+for i in lst:
+    if i % 2 == 0:
+        n = n + i
+print(n)
+for i in lst:
+    if not i % 2 == 0:
+        n = n + i
+print(n)
+#6 Розв'язати квадратне рівняння ax^2 +bx +c = 0 ( a,b,c вводяться з клавіатури )
+
+print("Введите коэффициенты для квадратного уравнения (ax^2 + bx + c = 0):")
+a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
+
+discr = b ** 2 - 4 * a * c;
+print("Дискриминант D = %.2f" % discr)
+if discr > 0:
+    import math
+
+    x1 = (-b + math.sqrt(discr)) / (2 * a)
+    x2 = (-b - math.sqrt(discr)) / (2 * a)
+    print("x1 = %.2f \nx2 = %.2f" % (x1, x2))
+elif discr == 0:
+    x = -b / (2 * a)
+    print("x = %.2f" % x)
+else:
+    print("Корней нет")
+
+#7 Знайти мінімум з трьох чисел.
+k = 0
+for i in range(4):
+    if i < k:
+        k = i
+    print(k)
+#8 Зробити задачу з паролем яку робили в аудиторії за допомогою цикла.
+password = 'ahah'
+v = input('print enter your password:')
+for i in v:
+    if v == password:
+        print('passport correct')
+    else:
+        print('wrong password')
+v = input('print enter your password:')
+for i in v:
+    if v == password:
+        print('nice try')
+    else:
+        print('second try')
+v = input('print enter your password:')
+for i in v:
+    if v == password:
+        print('good')
+    else:
+        print('you are blocked')
